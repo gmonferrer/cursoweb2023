@@ -1,61 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Tabla con cabeceras de mes, gasto y ahorro</title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
     <style>
-      /* Estilos para la tabla */
-      table {
-        border-collapse: collapse;
-        /* collapse es para fusionar los bordes */
-        width: 75%;
-        /* el 100% sería todo el ancho del navegador */
-        background-color: pink;
-      }
-      th, td {
-        text-align: left;
-        padding: 8px;
-        border: 1px solid black;
-      }
-      th {
-        background-color: rgb(196, 113, 113);
-      }
-      /* Estilos para los números */
-      td:nth-child(2),
-      td:nth-child(3) {
-        text-align: right;
-      }
+        table, th, td {
+            border: 1px solid black;
+        }
     </style>
-  </head>
-  <body>
-    <table>
-      <tr>
-        <th>Mes</th>
-        <th>Gasto</th>
-        <th>Ahorro</th>
-      </tr>
-      <tr>
-        <td>Enero</td>
-        <td>$1,000</td>
-        <td>$500</td>
-      </tr>
-      <tr>
-        <td>Febrero</td>
-        <td>$1,200</td>
-        <td>$600</td>
-      </tr>
-      <tr>
-        <td>Marzo</td>
-        <td>$800</td>
-        <td>$300</td>
-      </tr>
+</head>
+<body>
+    <table style="background-color:#FF0000">
+        <tr>
+            <th>Mes</th>
+            <th>Ahorros</th>
+            <th> </th>
+            <th>Extra</th>
+        </tr>
+        <tr>
+            <td>Enero</td>
+            <td>100?</td>
+            <td></td>
+            <td>100?</td>
+        </tr>
+        <tr>
+            <td>Febrero</td>
+            <td>80?</td>
+        </tr>
+        <tr>
+            <td>Febrero</td>
+            <td>80?</td>
+            <td>100?</td>
+        </tr>
     </table>
-    <script>
-      /* Dar formato a los números */
-      const numbers = document.querySelectorAll('td:nth-child(2), td:nth-child(3)');
-      numbers.forEach(number => {
-        const value = parseFloat(number.textContent.replace(/€/g, '').replace(/\./g, '').replace(/,/g, '.'));
-        number.textContent = value.toLocaleString('es-ES', {style: 'currency', currency: 'EUR'});
-      });
-    </script>
-  </body>
+</body>
 </html>
