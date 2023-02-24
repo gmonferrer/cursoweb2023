@@ -1,0 +1,16 @@
+h1 {
+    color: rgb(51, 12, 88);
+    text-align: center;
+    background-color: beige;
+}
+h2 {
+    color: rgb(126, 8, 8);
+    text-align: left;
+    background-color: rgb(196, 196, 130);
+}
+p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: rgb(34, 7, 156);
+    text-align: justify;
+}
