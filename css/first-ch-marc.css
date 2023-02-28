@@ -1,0 +1,15 @@
+/*Solo el primer párrafo obtiene esta propiedad*/
+/* p:first-child {
+    color: blue;
+}  */
+/*Solo el primer italic de todos los párrafos*/
+/* p i:first-child { 
+    color: rgb(21, 255, 0);
+}  */
+/* Todos los italic del primer párrafo */
+/* p:first-child i {
+    color: blue;
+} */
+input:focus { 
+    background-color: red;
+} 
