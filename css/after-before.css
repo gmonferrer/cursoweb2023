@@ -1,0 +1,14 @@
+p::after {
+    content: " - Sufijo";
+    /* se puede poner una imagen pero la debemos escalar
+    content: url(icono.jpg); */
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+    }
+    p::before {
+        content: url(../IMG/chec-mod.png);
+        background-color: yellow;
+        color: red;
+        font-weight: bold;
+        }
