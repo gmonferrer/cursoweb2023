@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Pseudo-elementos</title>
+    <link rel="stylesheet" href="../css/pseudo-elementos.css">
+</head>
+<body>
+    <div id="div1"> Texto del div
+        <h1 >Titular</h1>
+        <p id="primerp" class="classdiv1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis qui asperiores obcaecati autem maxime voluptates cupiditate ullam, explicabo aliquam iusto numquam pariatur dignissimos accusantium doloribus similique? Eligendi nostrum vero voluptate! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, corporis magnam. Quaerat excepturi recusandae aut, sequi placeat repellendus, alias possimus odio iste similique esse accusamus? Ea odio magni aliquam accusantium!</p>
+        <!-- aquí no coge el estilo de classdiv1 pq gana la id -->
+        <h2 class="classdiv1">SubTitular</h2>
+        <p class="classdiv1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis qui asperiores obcaecati autem maxime voluptates cupiditate ullam, explicabo aliquam iusto numquam pariatur dignissimos accusantium doloribus similique? Eligendi nostrum vero voluptate! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, corporis magnam. Quaerat excepturi recusandae aut, sequi placeat repellendus, alias possimus odio iste similique esse accusamus? Ea odio magni aliquam accusantium!</p>
+        <p class="classdiv1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis qui asperiores obcaecati autem maxime voluptates cupiditate ullam, explicabo aliquam iusto numquam pariatur dignissimos accusantium doloribus similique? Eligendi nostrum vero voluptate! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, corporis magnam. Quaerat excepturi recusandae aut, sequi placeat repellendus, alias possimus odio iste similique esse accusamus? Ea odio magni aliquam accusantium!</p>
+    </div>
+    
+    <div>
+        <h3>sub subTitular en otro div</h3>
+        <!-- Aquí si que coge el estilo de classdiv1   -->
+        <h2 class="classdiv1">SubTitular</h2>
+        <p class="classdiv1">Párrafo 1</p>
+        <p class="classdiv1">Párrafo 2</p>
+
+        <ul>
+            <li>Lista1</li>
+            <li>Lista2</li>
+            <li>Lista3</li>
+        </ul>
+    </div>
+
+</body>
+</html>

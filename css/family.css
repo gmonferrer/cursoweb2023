@@ -1,0 +1,5 @@
+div p {color: blue;}
+div > p {background-color: yellow;}
+div + p {text-align: right;}
+/* también podemos poner div + section, por ejemplo, o div ~ul  */
+div ~ p {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}

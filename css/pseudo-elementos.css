@@ -1,0 +1,32 @@
+h1::before {
+    content: "Prefijo -" ;
+    background-color: rgb(140, 142, 240);
+}
+h2::before {
+    content: "PrefijoH2 -" ;
+    background-color: rgb(141, 36, 71);
+}
+h3::after {
+    content: "- Sufijo" ;
+    background-color: rgb(4, 228, 71);
+}
+p::first-letter{
+    font-size: 50px;
+    color: rgb(138, 212, 18);
+}
+.classdiv1::first-line {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+::marker {
+    color: rgb(13, 109, 104); 
+    font-size: 23px;
+}
+#div1 *::selection {
+    color: rgb(130, 143, 16);
+    background: rgb(12, 12, 1);
+}
+.classdiv1::selection {
+    color: red;
+    background: yellow;
+}  
