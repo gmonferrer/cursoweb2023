@@ -1,0 +1,27 @@
+h1{
+    color:rgb(109, 109, 190);
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+p {color: chocolate;
+    font-size: 1.5em;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Roboto';
+}
+.negritaycursiva{
+    font-weight: 900;
+    font-style: italic;
+    line-height: 70px;
+    letter-spacing: 3px;
+    /* Separa las letras  */
+    word-spacing: 10px;
+}
+.shadow{ text-shadow: 2px 10px 6px #1162ac;}
+.center{text-align: center;}
+
+div.fondocolor{
+    color: black;
+    background-color: olive;
+    padding: 50px 0px 0 px 30px;
+}
