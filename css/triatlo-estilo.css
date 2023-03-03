@@ -1,0 +1,21 @@
+h1{
+        font-weight: bold;
+        background-color:antiquewhite;
+}
+
+h2{
+        text-align: center;
+        color:blueviolet;
+}
+
+img.izquierda {
+        float: left;
+        /* The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. */
+        margin-right: 30px;
+        /* para que quede separado de la imagen y se lea mejor */
+}
+p {
+        text-align: justify;
+        font-size: 1.5em;
+        /* Párrafos justificados y con letra más grande */
+}
