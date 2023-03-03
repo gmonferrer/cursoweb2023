@@ -1,21 +1,29 @@
 div {
-  width: 65px;
-  height: 65px;
-  line-height: 65px;
-  border: 3px solid gray;
-  padding: 7px;
-  border-radius: 65px;
-  /* Marc dice a partir de 50 px, también se puede poner 100% */
-  float: right;
-  font-size: 38px;
-  text-align: center;
-  font-family: helvetica;
-  margin-right: 4px;
-  margin-top: 16px;
-  color: gray;
-  background-color: aquamarine;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    /* line-height te centra el texto en el div  */
+    border: 3px solid gray;
+    padding: 7px;
+    /* padding te pone 7px a cada lado del texto respecto el div  */
+    border-radius: 50%;
+  /* Marc dice a partir de 50 %, también se puede poner 100% */
+    float: left;
+    font-size: 38px;
+    text-align: center;
+    font-family: helvetica;
+    margin-right: 4px;
+    margin-top: 16px;
+    color: gray;
+    background-color: aquamarine;
 }
+.clear{
+  clear:both;
+  /* para parar el float */
+}
+
 a{
+  
   text-decoration: none;
   font-weight: bold;
 }
