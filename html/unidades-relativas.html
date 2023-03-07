@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #p1 {
+        font-size: 2em;
+      }
+      #p2 {
+        font-size: 2ex;
+      }
+      #p3 {
+        font-size: 2ch;
+      }
+      #p4 {
+        font-size: 2rem;
+      }
+      #p5 {
+        font-size: 5vw;
+        /* 5% del ancho  */
+      }
+      #p6 {
+        font-size: 5vh;
+      }
+      #p7 {
+        font-size: 5vmin;
+        /* en base al mínimo (sea ancho o alto), cojo un %  */
+      }
+      #p8 {
+        font-size: 5vmax;
+        /* aquí escoge el máximo */
+      }
+      #p9 {
+        /* font-size: 50%; */
+        width: 50%;
+        background-color: aquamarine;
+        /* % respecto los 16px */
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">Párrafo EM</p>
+    <p id="p2">Párrafo EX</p>
+    <p id="p3">Párrafo CH</p>
+    <p id="p4">Párrafo REM</p>
+    <p id="p5">Párrafo VW, varía segun el ancho pantalla</p>
+    <p id="p6">Párrafo VH varía segun la altura de lapantalla</p>
+    <p id="p7">Párrafo VMIN varía segun pantalla</p>
+    <p id="p8">Párrafo VMAX varía segun pantalla</p>
+    <p id="p9">Párrafo %</p>
+  </body>
+</html>
