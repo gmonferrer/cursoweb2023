@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>Ocultar y mostrar elementos</title>
 
 <html>
   <body>
@@ -12,5 +13,19 @@
       type="button"
       onclick="document.getElementById('mostradOculto').style.display='block'">Muestra texto
     </button>
+    <p id="oculto" style="display:none">Texto oculto</p>
+    <button
+      type="button"
+      onclick="document.getElementById('oculto').style.display='block'">Mostrar Oculto
+      <!-- me muestra un texto nuevo oculto  -->
+    </button>
+    <hr>
+    <h2 id="enlamismaline">Subtitular</h2>
+    <div id="enlamismaline2">Texto</div>
+
+    <button type="button" onclick="document.getElementById('enlamismaline').style.display='inline'">En la misma linea h2</button>
+    
+    <button type="button" onclick="document.getElementById('enlamismaline2').style.display='inline'">En la misma linea div</button>
+  </body>
   </body>
 </html>
