@@ -1,0 +1,10 @@
+var x, y;
+x=7;
+y=4;
+document.getElementById("resultado").innerHTML ="7 + 4 = " + (x+y);
+document.getElementById("resultado1").innerHTML ="7 x 4 = " + x*y;
+document.getElementById("resultado2").innerHTML ="7 / 4 = " + x/y;
+document.getElementById("resultado3").innerHTML ="El resto de 7 y 4 es " +  x%y;
+document.write("<p> El valor de x es " + x);
+document.write("<p> El valor que muestra x++ es " + x++ +  " pero el valor es " + x);
+document.write("<p> El valor de ++x es " + ++x);
