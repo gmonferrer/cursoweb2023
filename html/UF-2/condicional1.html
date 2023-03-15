@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Muestra un saludo según la hora del día</h2>
+    <p id="buenas">Saludos</p>
+    <script>
+        var hour = new Date().getHours();
+        var saludo;
+        var fecha = new Date()
+       if (hour >= 6 && hour <=12) {
+          saludo = "Buenos días, la hora es: " + hour;
+        } else if (hour>12 && hour <=19) {
+            saludo = "Buenas tardes, la hora es: " + hour;
+        } else {
+          saludo = "Buenas noches, la hora es: " + hour;
+        }
+        document.getElementById("buenas").innerHTML = saludo;
+        document.write(fecha);
+    </script>
+  </body>
+</html>
