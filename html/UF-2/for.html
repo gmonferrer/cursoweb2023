@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Haz clic en el botón y se mostrarán los titulares del 1 al 6</p>
+    <button onclick="myFunction()">Prueba</button>
+    <div id="demo"></div>
+    <script>
+      function myFunction() {
+        // var x = "", i; //no hace falta crear la i, puede ser creada directamente en el for
+        // for (i = 1; i <= 6; i++) {
+        //   x = x + "<h" + i + ">Titular " + i + "</h" + i + ">";
+        // }
+        var x = "", i; //no hace falta crear la i, puede ser creada directamente en el for
+        for (i = 6; i > 0; i--) {
+          x = x + "<h" + i + ">Titular " + i + "</h" + i + ">";
+        }
+        document.getElementById("demo").innerHTML = x;
+      }
+//       <!-- bucle for   i   x  for (inicial i=1;(condición i<=6); incremento i++)
+// inicial     1   ""
+// 1ª vez      1   <h1>Titular 1</h1>
+// 2ª vez      2   <h1>Titular 1</h1><h2>Titular 2</h2>
+// 3ª vez      3   <h1>Titular 1</h1><h2>Titular 2</h2><h3>Titular 3</h3>
+// 4ª vez      4   <h1>Titular 1</h1><h2>Titular 2</h2><h3>Titular 3</h3><h4>Titular 4</h4>
+// 5ª vez      5   <h1>Titular 1</h1><h2>Titular 2</h2><h3>Titular 3</h3><h4>Titular 4</h4><h5>Titular 5</h5>
+// 6ª vez      6   <h1>Titular 1</h1><h2>Titular 2</h2><h3>Titular 3</h3><h4>Titular 4</h4><h5>Titular 5</h5><h6>Titular 6</h6>
+// 7ª vez      7   <h1>Titular 1</h1><h2>Titular 2</h2><h3>Titular 3</h3><h4>Titular 4</h4><h5>Titular 5</h5><h6>Titular 6</h6> -->
+
+//     <!-- x = x + "<h" + i + ">Titular " + i + "</h" + i + ">"; -->
+    </script>
+  </body>
+</html>
