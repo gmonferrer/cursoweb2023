@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Bucle switch-case</title>
+</head>
+<body>
+ <p id="texto"></p>
+ <!-- <p id="texto2"></p> -->
+
+<script>
+  var dia;
+  switch (new Date().getDay()) {
+    case 0:
+      dia = "Domingo";
+      break;
+    case 1:
+      dia = "Lunes";
+      break;
+    case 2:
+      dia = "Martes";
+      break;
+    case 3:
+      dia = "Miércoles";
+      break;
+    case 4:
+      dia = "Jueves";
+      break;
+    case 5:
+      dia = "Viernes";
+      break;
+    case 6:
+      dia = "Sábado";
+   }
+  var mes;
+  switch (new Date().getMonth()) {
+    case 0:
+      mes = "Enero";
+      break;
+    case 1:
+      mes = "Febrero";
+      break;
+    case 2:
+      mes = "Marzo";
+      break;
+    default:
+      mes =" diferente a Enero, Febrero y Marzo";
+      break;
+  }
+  document.getElementById("texto").innerHTML = "Hoy es " + dia +" y el mes es: " + mes;
+  //document.getElementById("texto2").innerHTML = "El mes es: " + mes;
+  document.write(new Date());
+
+</script>
+</body>
+</html>
