@@ -4,10 +4,53 @@
   <body>
     <h2>JavaScript Matriz-Arrays</h2>
     <p>Los índices de matriz están basados desde el cero, lo que significa que el primer elemento es [0].</p>
-    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+  
+    <p id="tamaño"></p>
+ 
     <script>
-      var bici = ["BH", "Orbea", "Specialized"];
-      document.getElementById("demo").innerHTML = bici[0];
+        // var bici = ["BH", "Orbea", "Specialized"];
+        // document.getElementById("demo1").innerHTML = "La bicicleta es " + bici[2];
+        // bici[5]="Decathlon";
+        // document.getElementById("demo2").innerHTML = "La nueva bicicleta es " + bici[4];// es indefinido, pero si pongo bici[5] me saldria "Decathlon"
+        // bici[3]=3478234;
+        // document.getElementById("demo3").innerHTML = "La nueva bicicleta es " + bici[3];
+        // bici[6]=true;
+        // document.getElementById("demo4").innerHTML = "La nueva bicicleta es " + bici[6];
+        // console.log("la bici es " + bici[1]);
+
+        var notas = [[3,"Marc"],[5,"David"],[7,"Rut"]]; //matriz de 2 x 3, la declaramos
+       
+        // document.getElementById("tamaño").innerHTML = "El tamaño es " + bici.length; // nos dice su tamaño
+
+        // for (let i=0; i<bici.length; i++){
+        //   console.log (bici[i]);
+        //}
+        document.getElementById("demo5").innerHTML = "La nota de "+ notas[0][1] + " es: "+ notas[0][0];
+        document.getElementById("demo6").innerHTML = "La nota de "+ notas[1][1] + " es: "+ notas[1][0];
+        //el primer corchete es la fila y el segundo la columna
+
+        var lenguajes = ["html","CSS","JavaScript", "php"];
+
+        for (let i=0; i<lenguajes.length; i++){
+          console.log (lenguajes[i]);
+          if (i==lenguajes.length-1){
+            document.write (lenguajes[i] + ".");
+         }
+          else if (i==lenguajes.length-2){
+            document.write (lenguajes[i] + " y ");
+          }
+          else{
+            document.write(lenguajes[i]+ ", ");
+          }
+          
+        }
+        
     </script>
   </body>
 </html>
