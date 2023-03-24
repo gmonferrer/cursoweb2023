@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Cuando hace clic al botón se hace la llamada a la función</p>
+        <p>La función mostrará el mensaje en el párrafo id demo</p>
+        <button onclick="funcion()">Haz clic</button> 
+        <p id="demo"></p>
+
+        <p>Clica en el botón</p>
+
+        <button onclick="funcArg('Marc Esteve', 'Formador')">Clic</button>
+
+        <p id="demo1"></p>
+
+        <!-- entre comillas la función porque es html  -->
+
+        <p>When you click on one of the buttons, a function will be called. The function will display the argument that is passed to it.</p>    
+            <form>
+            <input type="button" onclick="myfunction('Good Morning!')" value="In the Morning">
+            <input type="button" onclick="myfunction('Good Evening!')" value="In the Evening">
+            <input type="button" onclick="myfunction('')" value="Borrar saludo">
+            </form>
+            <p id="demo2"></p>
+    
+        <script src="../javascript/funciones1.js">         
+        </script>
+        
+    </body>
+</html>

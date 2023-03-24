@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <title>Objeto</title>
+  </head>
   <body>
     <h2>JavaScript Objecto</h2>
     <p id="demo"></p>
+    <p id="completo"></p>
     <script>
       var persona = {
         nombre: "John",
         apellido: "Smith",
         edad: 53,
-        colorOjos: "azules",
+        "color Ojos": "azules",
       };
-      document.getElementById("demo").innerHTML = persona.nombre + " tiene " + persona.edad + " años.";
+      //4 atributos
+      document.getElementById("demo").innerHTML =
+        persona.nombre +
+        " tiene " +
+        persona.edad +
+        " años y los ojos son: " +
+        persona["color Ojos"];
+      //así se llama a la variable y su propiedad
+      
+      var person = {
+        // Objeto con propidades, variables y método, funciones
+        firstName: "John",
+        lastName: "Doe", // Propiedades
+        id: 5566,
+        fullName: function () {
+          // Método
+          return "El nombre es " + this.firstName + " " + this.lastName + " y su id es " + this.id;
+        }
+      };
+      document.getElementById("completo").innerHTML =person.fullName();
+      console.log (typeof "John Doe") ; 
+      console.log (typeof (3.14)); //El 1º devuelve string el 2º number
+      console.log (typeof person);
     </script>
   </body>
 </html>
