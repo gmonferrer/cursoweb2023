@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Number Methods</h2>
+
+<p>The toString() method converts a number to a string.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 123;
+document.getElementById("demo").innerHTML =
+  x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+</script>
+
+<p>The toExponential() method returns a string, with the number rounded and written using exponential notation.</p>
+
+<p>An optional parameter defines the number of digits behind the decimal point.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+<p>The valueOf() method returns a number as a number:</p>
+<script>
+    
+let y = 9000.8736756;
+document.getElementById("demo1").innerHTML =
+  y.toExponential() + "<br>" + //aqui me deja todos los decimales
+  y.toExponential(2) + "<br>" + //aquí me pone solamente 2
+  y.toExponential(4) + "<br>" + 
+  y.toExponential(7);
+</script>
+
+
+<script>
+    let z = "123";
+    
+    document.getElementById("demo2").innerHTML = 
+      z.valueOf() + "<br>" +
+      (123).valueOf() + "<br>" +
+      (100 + 23).valueOf();
+    </script>
+    
+
+
+</body>
+</html>
