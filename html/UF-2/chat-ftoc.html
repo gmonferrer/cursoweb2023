@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversor de temperatura</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Conversor de temperatura</h1>
+	<p>Introduce la temperatura a convertir:</p>
+	<input type="number" id="inputTemp">
+	<button onclick="convertir()">Convertir</button>
+	<p id="resultado"></p>
+
+	<script>
+		function convertir() {
+			var temp = document.getElementById("inputTemp").value;
+			var farenheit = document.getElementById("farenheit").checked;
+			var resultado = document.getElementById("resultado");
+
+			if (farenheit) {
+				// Convertir de Farenheit a Celsius
+				var celsius = (temp - 32) * 5/9;
+				resultado.innerHTML = temp + " °F son " + celsius.toFixed(2) + " °C";
+			} else {
+				// Convertir de Celsius a Farenheit
+				var farenheit = (temp * 9/5) + 32;
+				resultado.innerHTML = temp + " °C son " + farenheit.toFixed(2) + " °F";
+			}
+		}
+	</script>
+	
+	<h2>Selecciona la unidad de temperatura:</h2>
+	<input type="radio" name="unidad" id="celsius" checked>
+	<label for="celsius">Celsius</label>
+	<input type="radio" name="unidad" id="farenheit">
+	<label for="farenheit">Farenheit</label>
+</body>
+</html>
