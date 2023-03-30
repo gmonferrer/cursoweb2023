@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Palíndromo</title>
+</head>
+<body>
+    <script>
+    let palindromo = "radar";
+    let long = palindromo.length;
+    let palindromo1 ="";
+    
+    console.log(long)
+    
+    while(long>= 0){
+    
+        palindromo1 += palindromo.charAt(long);
+    
+        long = long -1;
+    }
+    console.log("palindormo1 " +palindromo1)
+    
+    if (palindromo === palindromo1){
+        console.log("La palabra "+palindromo+" es un palindromo")
+    }
+    else {
+        console.log("La palabra "+palindromo+" NO es un palindromo")
+    } 
+</script>  
+</body>
+</html>

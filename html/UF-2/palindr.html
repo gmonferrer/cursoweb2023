@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Palíndromo</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+function palindromeChecker(str) {
+  const strReversed = str.split("").reverse().join("");
+  //el split separa cada letra, el reverse le da la vuelta y el join, arriba tengo el reverso
+
+  return strReversed === str ? "es palindromo" : "no es palindromo";
+}
+console.log(palindromeChecker("abcdefg gfedcba")); // es palindromo
+console.log(palindromeChecker("hola")); // no es palindromo
+console.log(palindromeChecker("omo")); // es palindromo
+</script>

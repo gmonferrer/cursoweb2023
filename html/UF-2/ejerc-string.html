@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Strings</title>
+</head>
+<body>
+    <p id="char">Comprobar si el primer caracter es igual</p>
+    <script>
+    let text1 = "dsjuhhtllid lkkkd";
+    let text2 = "doriuorwio ionoiro";
+    if (text1.charAt(0)==text2.charAt(0)){
+        document.getElementById("char").innerHTML = "el primer caracter es el mismo";
+    }
+    else {
+        document.getElementById("char").innerHTML = "el primer caracter NO es el mismo";
+    }
+    //con slice(0,2) para ver si son iguales los 2 primeros caracteres
+    </script>
+
+
+    <script>
+    //Revisa los dos primeros caracteres
+    let text3 = "dekjfjhkfs";
+    let text4 = "dejjksdkkfk";
+    //también se podría hacer con un charAt poniendo una && y añadiendo posición 2 &&(text3.charAT(1)==text3.charAt(1))
+    if (text3.slice(0,2) === text4.slice(0,2)){
+    console.log("SI tienen las dos primeras letras iguales");
+    } else {
+    console.log("NO tienen las mismas dos primeras letras");
+    }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar si un string es palindromo en HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <input type="text" id="inputString" placeholder="Escriba un string">
+    <button onclick="verificarPalindromo()">Verificar</button>
+    <p id="resultado"></p>
+    
+    <script>
+        function verificarPalindromo() {
+    // Obtener el texto del elemento de entrada
+    var inputString = document.getElementById("inputString").value;
+
+    // Eliminar caracteres no alfabéticos y convertir todo el texto a minúsculas
+    var normalizedString = inputString.replace(/[\W_]/g, "").toLowerCase();
+
+    // Invertir el string
+    var reversedString = normalizedString.split("").reverse().join("");
+
+    // Comparar el string original con el invertido
+    if (normalizedString === reversedString) {
+        document.getElementById("resultado").innerHTML = "El string es un palindromo";
+    } else {
+        document.getElementById("resultado").innerHTML = "El string no es un palindromo";
+    }
+}
+    </script>
+</body>
+</html>
+
+Enviar mensaje a #javascript

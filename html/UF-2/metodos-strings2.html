@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript String Methods</h1>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Reemplaza</button>
+    <p id="demo">Please visit Microsoft!</p>
+    <button onclick="ipsum()">ipsum</button>
+
+    <p id="demo1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, quaerat odio
+      magni doloribus magnam maiores soluta illum eveniet. Ad vero facilis
+      repellat? Quis nostrum, porro eum laudantium voluptatum voluptate vel.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, alias
+      porro, molestias quas voluptate facere deleniti labore a recusandae
+      aliquam in atque autem architecto amet. Placeat quos deserunt
+      exercitationem quasi?
+    </p>
+    <p id="demo3">Please visit Microsoft!</p>
+    
+    <script>
+      function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+        //le asignamos a la var text Please visit Microsoft!
+        document.getElementById("demo").innerHTML = text.replace(
+          "Microsoft",
+          "W3Schools"
+        );
+      }
+      //reemplaza solamente el primer item
+      function ipsum() {
+        let text1 = document.getElementById("demo1").innerHTML;
+        //le asignamos a la var text Please visit Microsoft!
+        document.getElementById("demo1").innerHTML = text1.replace(
+          /ipsum/g,
+          "XXXXX"
+        );
+        //también se podría hacer con replaeAll("ipsum", "XXXX")
+      }
+        let text2 = "     Hello World!     ";
+        let text3 = text2.trim();
+        
+        document.getElementById("demo3").innerHTML ="Length text1 = " + text2.length + "<br>Length text3 = " + text3.length;
+
+    </script>
+  </body>
+</html>

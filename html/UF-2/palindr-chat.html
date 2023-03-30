@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Palíndromo Checker</title>
+</head>
+<body>
+  <h1>Palíndromo Checker</h1>
+  <label for="stringInput">Ingresa una palabra o frase:</label>
+  <input type="text" id="stringInput">
+  <button onclick="checkPalindrome()">Checar</button>
+  <p id="result"></p>
+
+  <script>
+    function checkPalindrome() {
+      // Obtenemos el valor del input
+      const input = document.getElementById('stringInput').value;
+
+      // Convertimos el string a minúsculas y eliminamos los caracteres especiales
+      const cleanedInput = input.toLowerCase().replace(/[\W_]/g, '');
+
+      // Revertimos el string y lo comparamos con el original
+      const reversedInput = cleanedInput.split('').reverse().join('');
+      const isPalindrome = cleanedInput === reversedInput;
+
+      // Mostramos el resultado en la página
+      const resultElement = document.getElementById('result');
+      if (isPalindrome) {
+        resultElement.textContent = `"${input}" es un palíndromo.`;
+      } else {
+        resultElement.textContent = `"${input}" no es un palíndromo.`;
+      }
+    }
+  </script>
+</body>
+</html>
