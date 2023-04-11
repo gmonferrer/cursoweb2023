@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="../css/cacul-chat.css">
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <!-- no me lo hace con el teclado -->
+    <div class="calculator">
+    <input type="text" id="input" placeholder="0" onkeydown="handleKeyDown(event)" onkeypress="handleKeyPress(event)">
+
+      <div class="keys">
+        <button onclick="clearInput()">C</button>
+        <button onclick="appendToInput('/')">/</button>
+        <button onclick="appendToInput('*')">*</button>
+        <button onclick="appendToInput('-')">-</button>
+        <button onclick="appendToInput('+')">+</button>
+        <button onclick="appendToInput('7')">7</button>
+        <button onclick="appendToInput('8')">8</button>
+        <button onclick="appendToInput('9')">9</button>
+        <button onclick="appendToInput('4')">4</button>
+        <button onclick="appendToInput('5')">5</button>
+        <button onclick="appendToInput('6')">6</button>
+        <button onclick="appendToInput('1')">1</button>
+        <button onclick="appendToInput('2')">2</button>
+        <button onclick="appendToInput('3')">3</button>
+        <button onclick="appendToInput('0')">0</button>
+        <button onclick="appendToInput('.')">.</button>
+        <button onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script src="../javascript/calcul-chat.js"></script>
+  </body>
+</html>

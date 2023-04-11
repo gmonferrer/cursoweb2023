@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <style>
+      .calculator {
+        border: 2px solid black;
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+      }
+      input {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 5px;
+      }
+      button {
+        width: 48%;
+        padding: 5px;
+        margin: 1%;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="input" placeholder="0" onkeydown="handleKeyDown(event)" onkeyup="handleKeyUp(event)">
+      <div class="keys">
+        <button onclick="clearInput()">C</button>
+        <button onclick="appendToInput('/')">/</button>
+        <button onclick="appendToInput('*')">*</button>
+        <button onclick="appendToInput('-')">-</button>
+        <button onclick="appendToInput('+')">+</button>
+        <button onclick="appendToInput('7')">7</button>
+        <button onclick="appendToInput('8')">8</button>
+        <button onclick="appendToInput('9')">9</button>
+        <button onclick="appendToInput('4')">4</button>
+        <button onclick="appendToInput('5')">5</button>
+        <button onclick="appendToInput('6')">6</button>
+        <button onclick="appendToInput('1')">1</button>
+        <button onclick="appendToInput('2')">2</button>
+        <button onclick="appendToInput('3')">3</button>
+        <button onclick="appendToInput('0')">0</button>
+        <button onclick="appendToInput('.')">.</button>
+        <button onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script>
+      const input = document.getElementById("input");
+
+      function appendToInput(value) {
+        input.value += value;
+      }
+
+      function clearInput() {
+        input.value = "";
+      }
+
+      function calculate() {
+        try {
+          input.value = eval(input.value);
+        } catch (e) {
+          if (e instanceof SyntaxError) {
+            input.value = "Error";
+          }
+        }
+      }
+
+      function handleKeyDown(event) {
+        const key = event.key;
+        if (/^[0-9+\-*/.\s]$/.test(key)) {
+          appendToInput(key);
+        } else if (key === "Enter") {
+          calculate();
+        } else if (key === "Escape") {
+          clearInput();
+        } else if (key === "Backspace") {
+          event.preventDefault();
+          const inputValue = input.value;
+          input.value = inputValue.substring(0, inputValue.length - 1);
+        }
+      }
+
+      function handleKeyUp(event) {
+        const key = event.key;
+        if (/^[0-9+\-*/.\s]$/.test(key)) {
+          appendToInput(key);
+        }
+      }
+    </script>
+  </body>
+</html>

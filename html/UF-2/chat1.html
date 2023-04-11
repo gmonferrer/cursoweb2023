@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .screen {
+        display: flex;
+        justify-content: flex-end;
+        width: 240px;
+        height: 40px;
+        margin-bottom: 10px;
+        background-color: #eee;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+      }
+      .screen span {
+        font-size: 20px;
+      }
+      .keys {
+        display: grid;
+        grid-template-columns: repeat(4, 60px);
+        grid-gap: 10px;
+      }
+      .key {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .key:hover {
+        background-color: #f1f1f1;
+      }
+      .key:active {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="screen">
+        <span id="input">0</span>
+      </div>
+      <div class="keys">
+        <button class="key" onclick="clearInput()">C</button>
+        <button class="key" onclick="appendToInput('/')">/</button>
+        <button class="key" onclick="appendToInput('*')">*</button>
+        <button class="key" onclick="appendToInput('-')">-</button>
+        <button class="key" onclick="appendToInput('7')">7</button>
+        <button class="key" onclick="appendToInput('8')">8</button>
+        <button class="key" onclick="appendToInput('9')">9</button>
+        <button class="key" onclick="appendToInput('+')">+</button>
+        <button class="key" onclick="appendToInput('4')">4</button>
+        <button class="key" onclick="appendToInput('5')">5</button>
+        <button class="key" onclick="appendToInput('6')">6</button>
+        <button class="key" onclick="appendToInput('1')">1</button>
+        <button class="key" onclick="appendToInput('2')">2</button>
+        <button class="key" onclick="appendToInput('3')">3</button>
+        <button class="key" onclick="appendToInput('0')">0</button>
+        <button class="key" onclick="appendToInput('.')">.</button>
+        <button class="key" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script>
+      const input = document.getElementById("input");
+
+      function appendToInput(value) {
+        input.textContent += value;
+      }
+
+      function clearInput() {
+        input.textContent = "0";
+      }
+
+      function calculate() {
+        try {
+          input.textContent = eval(input.textContent);
+        } catch (e) {
+          if (e instanceof SyntaxError) {
+            input
