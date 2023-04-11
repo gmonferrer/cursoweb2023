@@ -1,5 +1,5 @@
 const fechaObjetivo = new Date(); // crea una instancia de la fecha actual
-fechaObjetivo.setHours(19, 0, 0); // establece la hora objetivo a las 19:00
+fechaObjetivo.setHours(21, 48, 0); // establece la hora objetivo a las 19:00
 
 // actualiza el contador cada segundo
 const intervalID = setInterval(() => {
