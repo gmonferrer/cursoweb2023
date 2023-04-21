@@ -1,0 +1,69 @@
+p {
+  font-size: 20px;
+}
+
+/* Estilo para el bot?n de men? */
+button {
+  padding: 8px;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilo para el men? desplegable */
+ul[role="menu"] {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Estilo para las opciones del men? */
+li[role="menuitem"] {
+  padding: 8px;
+  list-style: none;
+  cursor: pointer;
+}
+
+li[role="menuitem"]:hover {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para el men? desplegable cuando est? abierto */
+button[aria-expanded="true"] + ul[role="menu"] {
+  display: block;
+}
+
+/* ARIA para el bot?n de men? */
+button[aria-expanded] {
+  /* Indica que el bot?n es un control para abrir/cerrar el men? */
+  aria-haspopup: "true";
+  /* A?ade una etiqueta descriptiva para el bot?n */
+  aria-label: "Men?";
+  /* A?ade informaci?n sobre el estado del men? (abierto o cerrado) */
+  aria-expanded: "false";
+}
+
+/* ARIA para el men? desplegable */
+ul[role="menu"] {
+  /* Indica que el elemento es un men? desplegable */
+  role: "menubar";
+}
+
+/* ARIA para las opciones del men? */
+li[role="menuitem"] {
+  /* Indica que el elemento es una opci?n del men? */
+  role: "menuitem";
+}
+
+/* ARIA para el men? desplegable cuando est? abierto */
+button[aria-expanded="true"] + ul[role="menu"] {
+  /* Indica que el men? est? abierto */
+  aria-expanded: "true";
+}
