@@ -1,0 +1,103 @@
+/* Definimos un estilo CSS para nuestros contenedores */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Definimos un estilo CSS para nuestras tarjetas */
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: calc(
+      33.33% - 10px
+    ); /* Ajustamos el ancho de las tarjetas en funci?n del n?mero de elementos */
+  }
+
+  /* Hacemos que las tarjetas ocupen el 100% del ancho en pantallas peque?as */
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
+
+  /* Ajustamos el n?mero de tarjetas por fila en pantallas muy peque?as */
+  @media only screen and (max-width: 480px) {
+    .card {
+      width: 100%;
+    }
+    .container {
+      flex-direction: column;
+    }
+  }
+  /* Estilos para el encabezado */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  h1 {
+    margin: 0;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilos para las secciones */
+  main {
+    padding: 10px;
+  }
+  section {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    list-style: disc;
+    margin: 0 0 10px 20px;
+  }
+  ol {
+    list-style: decimal;
+    margin: 0 0 10px 20px;
+  }
+  table {
+    border-collapse: collapse;
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+  }
+  th {
+    background-color: #eee;
+    font-weight: bold;
+  }
+
+  /* Estilos para el pie de p?gina */
+  footer {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+  }
